@@ -32,4 +32,65 @@ Para construir os mapas k é usado nas aulas o [Karnaugh Map Solver](https://www
 
 ---
 
+## Procedimento para teste 
+
+### 1. Criar um novo arquivo de simulação
+
+1. Vá em: `File` → `New` → `University Program VWF`.
+
+   ![image](https://github.com/user-attachments/assets/d8809785-9368-402f-becd-424be58fd428)
+   
+   ![image](https://github.com/user-attachments/assets/02d5e636-0bc0-4315-aeab-336479c587dd)
+
+---
+
+### 2. Inserir os sinais (Nodes)
+
+2. Vá em: `Edit` → `Insert` → `Insert Node or Bus`.
+
+3. Clique em: `Node Finder...`
+
+4. No campo `List`, clique em **List**.
+
+5. Selecione os nodes que serão usados.
+
+6. Clique em `>`, depois `OK` e novamente `OK` para inserir os sinais na simulação.
+
+   ![image](https://github.com/user-attachments/assets/557c3c9d-7f82-4a61-9e0d-ed23fdc60ea7)
+   ![image](https://github.com/user-attachments/assets/7564be7e-cae4-4f4e-ab94-24f2b081c32c)
+   ![image](https://github.com/user-attachments/assets/274596f5-ab04-4e78-a18b-ddcdba282249)
+   ![image](https://github.com/user-attachments/assets/ffcc78a5-58ff-4a85-b730-302d7c1c5427)
+
+---
+
+### 3. Configurar o sinal de contagem (`Count Value`)
+
+7. Selecione o node desejado para **Count Value**.
+
+8. Configure a contagem usando a fórmula abaixo:
+
+   $$
+   d = \frac{1000}{n}
+   $$
+
+   Onde:
+
+   - \( d \): tempo ou peso por estado  
+   - \( n \): número total de estados do node  
+
+   ![image](https://github.com/user-attachments/assets/a17bd1b1-b921-4263-adb8-78b2cc1bc7a2)
+   ![image](https://github.com/user-attachments/assets/8848ede9-49cf-4283-a2ae-beb096f3a56f)
+
+---
+
+### 4. Rodar a simulação
+
+9. Vá em: `Simulation` → `Run Functional Simulation`.
+
+   ![image](https://github.com/user-attachments/assets/78ac271c-af9f-4092-b40b-be678df208f4)
+
+
+
+
+
 
