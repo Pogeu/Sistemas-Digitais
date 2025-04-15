@@ -1,9 +1,9 @@
--- Project Name: aula_20250408
+-- Project Name: aula_20250415
 -- Author: Pedro Nicollas Bastos
 -- Date: 20250401
 -- Description: SistemasDigitais aula 3 exercicio
 
-entity aula_20250408 is 
+entity aula_20250415 is 
 	port(
 		--inputs
 		signal selector, clock  : in bit;
@@ -11,11 +11,11 @@ entity aula_20250408 is
 		--outputs
 		signal display : out bit_vector(6 downto 0) 
 	);
-end entity aula_20250408;
+end entity aula_20250415;
 
 
 
-architecture logic of aula_20250408 is
+architecture logic of aula_20250415 is
 	--components init--
 	component seven_segments_converter is
 		port(
@@ -30,15 +30,15 @@ architecture logic of aula_20250408 is
 	--components end--
 	
 	signal auxiliar : bit_vector(6 downto 0);
-	signal data : bit_vector (3 downto0) := "0000";
+	signal data : bit_vector (3 downto 0) := "0000";
 	
 	begin
 		display <= not auxiliar;
 		
 		converter_0 : seven_segments_converter port map ('1',  data, auxiliar);
 		
-		-- state_machine process
-		state_machine : process(clk)
+		--state_machine process--
+		state_machine : process(clock)
 			begin
 				if clock = '0' and clock'event then
 				
@@ -61,6 +61,7 @@ architecture logic of aula_20250408 is
 							when "1110" => data <= "0000"; -- 14 -> 0
 							when "1111" => data <= "0000"; -- 15 -> 0
 						end case;
+					end if;
 						
 					if selector = '1' then
 						case data is 
@@ -83,6 +84,9 @@ architecture logic of aula_20250408 is
 						end case;
 					end if;
 					
+				end if;
+					
 			end process state_machine;
-	
+			--state_machine process end--
+			
 end architecture logic;
