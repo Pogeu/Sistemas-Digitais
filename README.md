@@ -27,7 +27,7 @@ Para construir os mapas k é usado nas aulas o [Karnaugh Map Solver](https://www
 | "1011"                   | b         | 1111110           |
 | "1100"                   | C         | 0111001           |
 | "1101"                   | d         | 1011110           |
-| "1110"                   | E         | 1111101           |
+| "1110"                   | E         | 1111001           |
 | "1111"                   | F         | 1110001           |
 
 ---
