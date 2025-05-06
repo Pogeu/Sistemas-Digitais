@@ -70,7 +70,7 @@ Para construir os mapas k é usado nas aulas o [Karnaugh Map Solver](https://www
 8. Configure a contagem usando a fórmula abaixo:
 
    $$
-   d = \frac{1000}{n}
+   d = \frac{1000}{2n}
    $$
 
    Onde:
